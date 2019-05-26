@@ -18,22 +18,22 @@
 using namespace CMakeTemplate;
 
 int main() {
-    Logger::log();
-    Logger::info("Enter main()");
-    Logger::warn("Release warning");
-    Logger::err("Release error");
-    INFO("Debug info")
-    WARN("Debug warning")
-    ERR("Debug error")
+  Logger::log();
+  Logger::info("Enter main()");
+  Logger::warn("Release warning");
+  Logger::err("Release error");
+  INFO("Debug info")
+  WARN("Debug warning")
+  ERR("Debug error")
 
-    Util::libraryFunction();
+  Util::libraryFunction();
 
-    Logger::info("Exit main()");
-    Logger::log();
+  Logger::info("Exit main()");
+  Logger::log();
 
 #ifndef CLION
-    // If not in ide, keep console open
-    system("pause");
+  // If not in ide, keep console open
+  system("pause");
 #endif
-    return 0;
+  return 0;
 }

@@ -15,35 +15,35 @@
 include(sources.cmake)
 
 add_Library(Logger SHARED
-        ${SOURCE_LIST}
-        )
+    ${SOURCE_LIST}
+    )
 
 target_compile_definitions(Logger PRIVATE
-        $<$<CONFIG:Debug>:DEBUG>
-        $<$<BOOL:$ENV{CLION_IDE}>:CLION>
-        LOGGER_DLL
-        )
+    $<$<CONFIG:Debug>:DEBUG>
+    $<$<BOOL:$ENV{CLION_IDE}>:CLION>
+    LOGGER_DLL
+    )
 
 target_include_directories(Logger PRIVATE
-        )
+    )
 
 target_compile_options(Logger PRIVATE
-        $<$<CXX_COMPILER_ID:MSVC>:/W4 /WX /Za>
-        $<$<NOT:$<CXX_COMPILER_ID:MSVC>>:-Wall -Wextra -pedantic -Werror>
-        )
+    $<$<CXX_COMPILER_ID:MSVC>:/W4 /WX /Za>
+    $<$<NOT:$<CXX_COMPILER_ID:MSVC>>:-Wall -Wextra -pedantic -Werror>
+    )
 
 target_link_options(Logger PRIVATE
-        $<$<NOT:$<CXX_COMPILER_ID:MSVC>>:-static>
-        )
+    $<$<NOT:$<CXX_COMPILER_ID:MSVC>>:-static>
+    )
 
 set_target_properties(Logger PROPERTIES
-        RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/out/${CMAKE_BUILD_TYPE}
-        )
+    RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/out/${CMAKE_BUILD_TYPE}
+    )
 
 get_filename_component(BIN_DIR_NAME ${CMAKE_BINARY_DIR} NAME)
 
 add_custom_command(TARGET Logger
-        POST_BUILD
-        COMMAND ${CMAKE_COMMAND} -E make_directory ${CMAKE_SOURCE_DIR}/out/${BIN_DIR_NAME}
-        COMMAND ${CMAKE_COMMAND} -E copy_directory ${CMAKE_BINARY_DIR}/out ${CMAKE_SOURCE_DIR}/out/${BIN_DIR_NAME}
-        )
+    POST_BUILD
+    COMMAND ${CMAKE_COMMAND} -E make_directory ${CMAKE_SOURCE_DIR}/out/${BIN_DIR_NAME}
+    COMMAND ${CMAKE_COMMAND} -E copy_directory ${CMAKE_BINARY_DIR}/out ${CMAKE_SOURCE_DIR}/out/${BIN_DIR_NAME}
+    )

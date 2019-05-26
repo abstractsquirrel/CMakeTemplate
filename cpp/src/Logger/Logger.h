@@ -35,13 +35,13 @@
 
 namespace CMakeTemplate::Logger {
 
-    // public:
-    LOGGER_EXPORT void info(const std::string& msg);
+  // public:
+  LOGGER_EXPORT void info(const std::string& msg);
 
-    LOGGER_EXPORT void warn(const std::string& msg);
+  LOGGER_EXPORT void warn(const std::string& msg);
 
-    LOGGER_EXPORT void err(const std::string& msg);
+  LOGGER_EXPORT void err(const std::string& msg);
 
-    LOGGER_EXPORT void log(const std::string& msg = "", const std::string& prefix = "");
+  LOGGER_EXPORT void log(const std::string& msg = "", const std::string& prefix = "");
 }
 

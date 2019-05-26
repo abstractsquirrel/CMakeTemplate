@@ -17,17 +17,17 @@
 #include "Logger.h"
 
 namespace CMakeTemplate {
-    void Util::libraryFunction() {
-        Logger::log();
-        Logger::info("In Util::libraryFunction()");
+  void Util::libraryFunction() {
+    Logger::log();
+    Logger::info("Enter Util::libraryFunction()");
 
-        Logger::warn("Release warning");
-        Logger::err("Release error");
-        INFO("Debug info")
-        WARN("Debug warning")
-        ERR("Debug error")
+    Logger::warn("Release warning");
+    Logger::err("Release error");
+    INFO("Debug info")
+    WARN("Debug warning")
+    ERR("Debug error")
 
-        Logger::info("Exit Util::libraryFunction()");
-        Logger::log();
-    }
+    Logger::info("Exit Util::libraryFunction()");
+    Logger::log();
+  }
 }

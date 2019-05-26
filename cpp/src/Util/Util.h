@@ -15,9 +15,9 @@
 #pragma once
 
 namespace CMakeTemplate {
-    class Util {
-    public:
-        static void libraryFunction();
-    };
+  class Util {
+  public:
+    static void libraryFunction();
+  };
 }
 

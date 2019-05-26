@@ -18,24 +18,24 @@
 
 namespace CMakeTemplate::Logger {
 
-    static const std::string kInfoPrefix{"[ INFO ] "};
-    static const std::string kWarnPrefix{"[ WARN ] "};
-    static const std::string kErrorPrefix{"[ ERROR ] "};
+  static const std::string kInfoPrefix{"[ INFO ] "};
+  static const std::string kWarnPrefix{"[ WARN ] "};
+  static const std::string kErrorPrefix{"[ ERROR ] "};
 
-    LOGGER_EXPORT void info(const std::string& msg) {
-        log(msg, kInfoPrefix);
-    }
+  LOGGER_EXPORT void info(const std::string& msg) {
+    log(msg, kInfoPrefix);
+  }
 
-    LOGGER_EXPORT void warn(const std::string& msg) {
-        log(msg, kWarnPrefix);
-    }
+  LOGGER_EXPORT void warn(const std::string& msg) {
+    log(msg, kWarnPrefix);
+  }
 
-    LOGGER_EXPORT void err(const std::string& msg) {
-        log(msg, kErrorPrefix);
-    }
+  LOGGER_EXPORT void err(const std::string& msg) {
+    log(msg, kErrorPrefix);
+  }
 
-    LOGGER_EXPORT void log(const std::string& msg, const std::string& prefix) {
-        std::cout << prefix << msg << std::endl;
-    }
+  LOGGER_EXPORT void log(const std::string& msg, const std::string& prefix) {
+    std::cout << prefix << msg << std::endl;
+  }
 }
 

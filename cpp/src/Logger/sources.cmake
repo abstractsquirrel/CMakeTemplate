@@ -13,5 +13,5 @@
 # limitations under the License.
 
 set(SOURCE_LIST
-        Logger.h Logger.cc
-        )
+    Logger.h Logger.cc
+    )

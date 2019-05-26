@@ -13,5 +13,5 @@
 # limitations under the License.
 
 set(SOURCE_LIST
-        main.cc
-        )
+    main.cc
+    )
