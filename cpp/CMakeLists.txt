@@ -17,7 +17,7 @@ cmake_minimum_required(VERSION 3.14)
 project(CMakeTemplate)
 
 set_directory_properties(PROPERTIES
-    $<$<CXX_COMPILER_ID:MSVC>:VS_STARTUP_PROJECT Application>
+    VS_STARTUP_PROJECT Application
     )
 
 set(CMAKE_CXX_STANDARD 17)
